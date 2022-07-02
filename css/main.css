@@ -143,6 +143,14 @@ section, .footer {
   color: #FFFFFF;
   text-decoration: none;
   margin-top: 40px;
+    transition: all 0.3s;
+}
+
+.main_btn:hover {
+  width: 200px;
+  height: 70px;
+  font-size: 22px;
+  border-radius: 32px;
 }
 
 .for_wrapper {
