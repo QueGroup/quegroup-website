@@ -1,11 +1,11 @@
 const slides = document.querySelectorAll(".slider_item"),
-      rightBtn = document.querySelector(".slider_right"),
-      leftBtn = document.querySelector(".slider_left");
+    rightBtn = document.querySelector(".slider_right"),
+    leftBtn = document.querySelector(".slider_left");
 
 
 let slideIndex = 1;
 
-function showSLides (n) {
+function showSLides(n) {
     if (n > slides.length) {
         slideIndex = 1;
     } else if (n < 1) {
