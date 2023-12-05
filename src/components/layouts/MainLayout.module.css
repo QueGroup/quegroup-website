@@ -1,0 +1,28 @@
+.mainStyle {
+    background-image: radial-gradient(50.00% 50.00%, #9933FF 0%, #6600CC 100%);
+    position: relative;
+}
+
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.heart {
+    transition: transform 0.3s; /* Добавляем плавную анимацию при изменении положения элемента */
+    transform: translate(0, 0); /* Возвращаем элемент в исходное положение */
+}
+  
+.heart:hover {
+    transform: translate(10px, 10px); /* При наведении элемент отодвигается на 10px вниз и вправо */
+}
+
+.heartLittle {
+    width: 66px;
+    height: 66px;
+    top: 100px;
+    position: absolute;
+}
+  
