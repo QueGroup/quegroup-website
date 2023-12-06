@@ -1,4 +1,6 @@
 import styles from './Intro.module.css';
+import React from "react";
+import {NavLink} from "react-router-dom";
 
 const Intro : React.FC = () => {
   return (

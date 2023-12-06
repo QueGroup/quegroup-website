@@ -1,13 +1,15 @@
 import styles from './Footer.module.css';
+import {NavLink} from "react-router-dom";
+import React from "react";
 
 const Footer : React.FC = () => {
   return (
     <footer className={styles.footer}>
         <div>
-            <div className={styles.queInfo}>
+            <NavLink to="/" className={styles.queInfo}>
                 <img src='/img/main-logo.svg' alt="логотип"/>
                 <p className={styles.Que}>Que</p>
-            </div>
+            </NavLink>
             <p className={styles.queData}>”Que” • 2022 - 2023</p>
             <p className={styles.queData}>Все права закреплены за правообладателем.</p>
             <p className={styles.queData}>Проект является час- тью “Open Source” сообщества.</p>
@@ -29,7 +31,7 @@ const Footer : React.FC = () => {
             <p className={styles.navigationItem}>Тел.:+7 (958) 756-35-64</p>
             <p className={styles.navigationItem}>ИНН: 6547 8521 4963</p>
             <p className={styles.navigationItem}>Документы и справки</p>
-            <p className={styles.navigationItem}>Политика компании</p>
+            <NavLink to="politics" className={styles.navigationItem}>Политика компании</NavLink>
             <p className={styles.navigationItem}>Нац. проекты России</p>
         </div>
         <div className={styles.blogs}>

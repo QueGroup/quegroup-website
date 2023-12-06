@@ -30,8 +30,13 @@
 }
 
 .navigationItem {
-    margin-bottom: 10px;
+    margin: 0 0 20px;
     cursor: pointer;
+}
+
+.navigationItem a {
+    margin: 0 0 20px !important;
+    display: block;
 }
 
 .socialFooter {
