@@ -1,12 +1,14 @@
 import styles from './Header.module.css';
+import {NavLink} from "react-router-dom";
+import React from "react";
 
 const Header : React.FC = () => {
   return (
     <header>
         <div className={styles.header}>
-            <div className={styles.mainLogo}>
+            <NavLink to="/" className={styles.mainLogo}>
                 <img src='/img/main-logo.svg'/>
-            </div>
+            </NavLink>
             <ul className={styles.headerList}>
                 <li className={styles.headerItem}>Главная</li>
                 <li className={styles.headerItem}>О проекте</li>

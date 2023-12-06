@@ -13,13 +13,28 @@
 .headerList {
     list-style-type: none;
     display: flex;
-    gap: 50px;
+    align-items: center;
+/*    gap: 50px;*/
 }
 
 .headerItem {
     font-size: 18px;
     color: #fff;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    min-width: 120px;
+    max-width: 150px;
+    margin-right: 50px;
+    height: 24px;
+}
+
+.headerItem:last-child {
+    margin-right: 0;
+}
+
+
+.headerItem:hover {
+    font-size: 20px;
 }
 
 .signIn {
