@@ -1,4 +1,4 @@
-import styles from './Intro.module.css';
+import styles from './Intro.module.scss';
 import React from "react";
 import {NavLink} from "react-router-dom";
 

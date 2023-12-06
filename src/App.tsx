@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Routes ,Route} from "react-router-dom";
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Main from './components/main/Main';
 import MainLayout from './components/layouts/MainLayout';
 import Politics from './components/politics/Politics';

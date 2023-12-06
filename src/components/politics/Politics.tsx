@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
-import { useState } from "react";
-import styles from './Politics.module.css';
+import {useState} from "react";
+import styles from './Politics.module.scss';
 
 const Politics = () => {
     const [activeButton, setActiveButton] = useState(null);
@@ -34,17 +34,31 @@ const Politics = () => {
     };
 
 
-
-    return(
+    return (
         <section className={styles.politics}>
             <div className={styles.politicsButtons}>
                 <div className={styles.politicsType}>
                     {/* eslint-disable-next-line @typescript-eslint/no-unused-expressions */}
-                    <button className={`${styles.politicsTypeButton} ${activeButton === 0 ? styles.politicsTypeButtonActive : ""}`} onClick={() : void => {handleButtonClick(0)}}>Конфиденциальность</button>
+                    <button
+                        className={`${styles.politicsTypeButton} ${activeButton === 0 ? styles.politicsTypeButtonActive : ""}`}
+                        onClick={(): void => {
+                            handleButtonClick(0)
+                        }}>Конфиденциальность
+                    </button>
                     {/* eslint-disable-next-line @typescript-eslint/no-unused-expressions */}
-                    <button className={`${styles.politicsTypeButton} ${activeButton === 1 ? styles.politicsTypeButtonActive : ""}`} onClick={() : void => {handleButtonClick(1)}}>Пользователям</button>
+                    <button
+                        className={`${styles.politicsTypeButton} ${activeButton === 1 ? styles.politicsTypeButtonActive : ""}`}
+                        onClick={(): void => {
+                            handleButtonClick(1)
+                        }}>Пользователям
+                    </button>
                     {/* eslint-disable-next-line @typescript-eslint/no-unused-expressions */}
-                    <button className={`${styles.politicsTypeButton} ${activeButton === 2 ? styles.politicsTypeButtonActive : ""}`} onClick={() : void => {handleButtonClick(2)}}>Лицензия</button>
+                    <button
+                        className={`${styles.politicsTypeButton} ${activeButton === 2 ? styles.politicsTypeButtonActive : ""}`}
+                        onClick={(): void => {
+                            handleButtonClick(2)
+                        }}>Лицензия
+                    </button>
                 </div>
                 <button className={styles.politicsSearch}>
                     <img src='/img/search.png' className={styles.politicsSearchLogo}></img>
