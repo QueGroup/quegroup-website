@@ -11,7 +11,7 @@ const MainLayout : React.FC = () => {
 
 	const [main, setMain] = useState<boolean>(true);
 
-	useEffect(() => {
+	useEffect((): void => {
 		if (location.pathname === "/" || location.pathname === "/politics") {
       setMain(true)
     }

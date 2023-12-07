@@ -1,4 +1,6 @@
-$color-white: #fff;
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
 $font-weight-bold: 700;
 
 $bg-heart-image: url('../../../../public/img/big-heart.png');

@@ -6,7 +6,7 @@ import Main from './components/main/Main';
 import MainLayout from './components/layouts/MainLayout';
 import Politics from './components/politics/Politics';
 
-function App() {
+function App() : JSX.Element {
   return (
       <BrowserRouter>
             <div className="App">

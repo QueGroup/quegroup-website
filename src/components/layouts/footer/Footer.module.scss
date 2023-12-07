@@ -1,6 +1,8 @@
+@import "../../../mixins.scss";
+
 .footer {
     padding: 82px 228px;
-    color: white;
+    color: $color-white;
     font-size: 16px;
     font-weight: 500;
     word-wrap: break-word;
@@ -14,7 +16,7 @@
 }
 
 .Que {
-    color: #fff;
+    color: $color-white;
     font-size: 41px;
     font-weight: 800;
     margin: 0;

@@ -1,3 +1,6 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
 .mainStyle {
     background-image: radial-gradient(50.00% 50.00%, #9933FF 0%, #6600CC 100%);
     position: relative;

@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-resolution) {
+    @content;
+  }
+}
