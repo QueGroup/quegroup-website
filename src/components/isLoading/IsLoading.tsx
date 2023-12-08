@@ -1,4 +1,4 @@
-import styles from './isLoading.module.css';
+import styles from './isLoading.module.scss';
 
 const IsLoading: React.FC = () => {
   return (

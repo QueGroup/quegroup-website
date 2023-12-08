@@ -1,0 +1,83 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+@mixin button-styles($padding-size, $bg-color, $text-color, $hover-padding-size, $hover-bg-color, $hover-text-color, $hover-height) {
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word;
+    padding: $padding-size;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid $color-white;
+    color: $color-white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 54px;
+
+    &:hover {
+        padding: $hover-padding-size;
+        background-color: $hover-bg-color;
+        color: $hover-text-color;
+        height: $hover-height;
+    }
+}
+
+.politics {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    &Buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &Type {
+        display: flex;
+        gap: 25px;
+        min-height: 67px;
+        align-items: center;
+
+            &Button {
+                @include button-styles(13px 29px, transparent, $color-white, 20px 34px, $color-white, $color-black, 67px);
+
+                &Active {
+                    @include button-styles(13px 29px, $color-white, $color-black, 13px 29px, $color-white, $color-white, 54px);
+                }
+            }
+        }
+
+    &Search {
+        padding: 15px;
+        background: transparent;
+        border: 2px solid $color-white;
+        border-radius: 25px;
+        cursor: pointer;
+
+        &Logo {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &Block {
+        position: relative;
+        height: 420px;
+        border: 2px solid $color-white;
+        border-radius: 25px;
+        margin-top: 25px;
+        overflow-y: scroll;
+        z-index: 5;
+    }
+
+    &Text {
+        padding: 20px 30px;
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: normal;
+        height: 500px;
+        z-index: 5;
+    }
+}

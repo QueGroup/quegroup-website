@@ -1,0 +1,105 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
+$font-weight-bold: 700;
+
+$bg-heart-image: url('../../../../public/img/big-heart.png');
+
+@mixin button-styles {
+    border: 2px solid $color-white;
+    color: $color-white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.intro {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    &Block {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border-radius: 50px;
+        background-color: $color-white;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 175px;
+            height: 175px;
+            background-image: $bg-heart-image;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            top: 431px;
+            left: 112px;
+        }
+    }
+
+    &Button {
+        @include button-styles;
+        margin-top: 20px;
+    }
+
+    &Buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+
+        &Button {
+            @include button-styles;
+        }
+    }
+}
+
+.titleBlock {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.title {
+    font-size: 72px;
+    line-height: 75px;
+    font-weight: $font-weight-bold;
+    word-wrap: break-word;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px $color-white;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    width: 566px;
+    color: $color-white;
+    font-size: 72px;
+    font-weight: $font-weight-bold;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.users {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 600;
+    word-wrap: break-word;
+    width: 180px;
+}
+
+.tgButton {
+    padding: 15px 16px 10px 14px;
+}
+
+.tg {
+    width: 24px;
+    height: 24px;
+}

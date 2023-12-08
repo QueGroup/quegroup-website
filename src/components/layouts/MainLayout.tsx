@@ -2,17 +2,17 @@ import { useNavigate, useLocation, Outlet } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { randomPoz1, randomPoz2, randomPoz3, randomPoz4, randomPoz5, randomPoz6, randomPoz7, randomPoz8, randomPoz9, randomPoz10, randomPoz11, randomPoz12 } from "../scripts/HeartsRandom";
 import Header from "./header/Header";
-import styles from './MainLayout.module.css';
+import styles from './MainLayout.module.scss';
 import Footer from "./footer/Footer";
 
 const MainLayout : React.FC = () => {
-  useNavigate();
-  const location = useLocation();
+	useNavigate();
+	const location = useLocation();
 
-  const [main, setMain] = useState<boolean>(true)
+	const [main, setMain] = useState<boolean>(true);
 
-    useEffect(() => {
-    if (location.pathname === "/" || location.pathname === "/politics") {
+	useEffect((): void => {
+		if (location.pathname === "/" || location.pathname === "/politics") {
       setMain(true)
     }
 

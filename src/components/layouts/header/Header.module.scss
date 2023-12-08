@@ -1,0 +1,62 @@
+@import "../../../mixins.scss";
+
+$header-padding: 45px 120px;
+$header-font-weight: 600;
+$header-item-margin: 50px;
+
+.header {
+    display: flex;
+    padding: $header-padding;
+    justify-content: space-between;
+    font-weight: $header-font-weight;
+
+    &List {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        /* gap: 50px; */
+    }
+
+    &Item {
+        font-size: 18px;
+        color: $color-white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        min-width: 120px;
+        max-width: 150px;
+        margin-right: $header-item-margin;
+        height: 24px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        font-size: 18px;
+
+        &:hover {
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+.signIn {
+    border: 2px solid #fff;
+    color: $color-white;
+    padding: 15px 29px 13px 66px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 18px;
+    background-image: url('../../../../public/img/tg.svg');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 25px 15px;
+    cursor: pointer;
+}
+
+.mainLogo {
+    width: 50px;
+    height: 50px;
+}
