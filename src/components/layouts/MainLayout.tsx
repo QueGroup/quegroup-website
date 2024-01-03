@@ -10,10 +10,15 @@ const MainLayout : React.FC = () => {
 	const location = useLocation();
 
 	const [main, setMain] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
 	useEffect((): void => {
 		if (location.pathname === "/" || location.pathname === "/politics") {
       setMain(true)
+    }
+
+    else if (location.pathname === "/isloading" || location.pathname === "/errorpage") {
+      setLoading(true)
     }
 
     else if (location.pathname !== "/") {
@@ -23,26 +28,30 @@ const MainLayout : React.FC = () => {
 
 
   return (
-    <div className={`${main ? styles.mainStyle : ''}`}>
+    <div className={`${main ? styles.mainStyle : ''} ${styles.layout}`}>
         <div className={`${main ? styles.hearts : 'disabled'}`}>
-              <div className={styles.heart}>
-                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz1}/>
-                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz2}/>
-                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz3}/>
-                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz4}/>
-                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz5}/>
-                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz6}/>
-                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz7}/>
-                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz8}/>
-                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz9}/>
-                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz10}/>
-                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz11}/>
-                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz12}/>
+              <div className={`${styles.heart} ${loading ? "disabled" : ""}`}>
+                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz1} alt=""/>
+                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz2} alt=""/>
+                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz3} alt=""/>
+                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz4} alt=""/>
+                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz5} alt=""/>
+                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz6} alt=""/>
+                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz7} alt=""/>
+                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz8} alt=""/>
+                  <img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz9} alt=""/>
+                  <img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz10} alt=""/>
+                  <img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz11} alt=""/>
+                  <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz12} alt=""/>
               </div>
         </div>
-        <Header/>
-        <Outlet/>
-        <Footer/>
+        <div className={`${loading ? "disabled" : ""}`}>
+            <Header/>
+        </div>
+            <Outlet/>
+        <div className={`${loading ? "disabled" : ""}`}>
+            <Footer/>
+        </div>
     </div>
   )
 }

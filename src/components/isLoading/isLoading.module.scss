@@ -1,2 +1,21 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
+
+.main {
+    background-image: radial-gradient(50.00% 50.00%, #9933FF 0%, #6600CC 100%);
+    position: relative;
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 10px;
+}
