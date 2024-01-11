@@ -5,7 +5,7 @@ import React from "react";
 const Footer : React.FC = () => {
   return (
     <footer className={styles.footer}>
-        <div>
+        <div className={styles.footerMainInfo}>
             <NavLink to="/" className={styles.queInfo}>
                 <img src='/img/main-logo.svg' alt="логотип"/>
                 <p className={styles.Que}>Que</p>
@@ -24,7 +24,7 @@ const Footer : React.FC = () => {
                 <li className={styles.navigationItem}>Контакты</li>
             </ul>
         </div>
-        <div className={styles.company}>
+        <div className={styles.navigation}>
             <h3 className={styles.navigationTitle}>О Компании</h3>
             <p className={styles.navigationItem}>Россия, Санкт-Петербург</p>
             <p className={styles.navigationItem}>Ул. Юнкеров 131, лит. А</p>
@@ -34,7 +34,7 @@ const Footer : React.FC = () => {
             <NavLink to="politics" className={styles.navigationItem}>Политика компании</NavLink>
             <p className={styles.navigationItem}>Нац. проекты России</p>
         </div>
-        <div className={styles.blogs}>
+        <div className={styles.navigation}>
             <h3 className={styles.navigationTitle}>Социальные сети</h3>
             <p className={styles.navigationItem}>Наш блог ВКонтакте</p>
             <p className={styles.navigationItem}>Наш блог Telegram</p>
