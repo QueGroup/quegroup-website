@@ -7,7 +7,14 @@
     font-weight: 500;
     word-wrap: break-word;
     display: flex;
+    align-items: flex-start;
     gap: 100px;
+}
+
+.footerMainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .queInfo {
@@ -26,23 +33,40 @@
     width: 200px;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigationList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+}
+
 .navigationTitle {
     font-size: 18px;
     font-weight: 600;
+    margin: 0;
 }
 
 .navigationItem {
-    margin: 0 0 20px;
     cursor: pointer;
 }
 
 .navigationItem a {
-    margin: 0 0 20px !important;
     display: block;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .socialFooter {
     width: 40px;
     height: 40px;
-    margin-bottom: 25px;
 }

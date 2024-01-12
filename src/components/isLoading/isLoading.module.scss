@@ -1,2 +1,42 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
+
+.main {
+    background-image: radial-gradient(50.00% 50.00%, #9933FF 0%, #6600CC 100%);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    fill: #9933FF;
+    animation: colorOpacity 2s infinite;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-family: Montserrat;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 10px;
+    animation: colorOpacity 2s infinite;
+}
+
+@keyframes colorOpacity {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
