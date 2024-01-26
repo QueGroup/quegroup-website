@@ -17,3 +17,21 @@
     @content;
   }
 }
+
+@mixin button-styles {
+  border: 2px solid $color-white;
+  color: $color-white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: transparent;
+  color: $color-white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $dark-purple;
+    background-color: $color-white;
+  }
+}

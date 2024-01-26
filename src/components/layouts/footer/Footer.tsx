@@ -3,10 +3,15 @@ import {NavLink} from "react-router-dom";
 import React from "react";
 
 const Footer : React.FC = () => {
+
+    const toTop = () => {
+        window.scrollTo(0, 0);
+    }
+
   return (
     <footer className={styles.footer}>
         <div className={styles.footerMainInfo}>
-            <NavLink to="/" className={styles.queInfo}>
+            <NavLink to="/" className={styles.queInfo} onClick={() => toTop()}>
                 <img src='/img/main-logo.svg' alt="логотип"/>
                 <p className={styles.Que}>Que</p>
             </NavLink>

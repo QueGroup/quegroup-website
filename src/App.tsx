@@ -16,7 +16,7 @@ function App() : JSX.Element {
                         <Route index element={<Main/>}></Route>
                         <Route path='politics' element={<Politics></Politics>}></Route>
                         <Route path='isloading' element={<IsLoading></IsLoading>}></Route>
-                        <Route path='errorpage' element={<ErrorPage></ErrorPage>}></Route>
+                        <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
                     </Route>
                 </Routes>
             </div>

@@ -7,9 +7,9 @@
     word-wrap: break-word;
     padding: $padding-size;
     border-radius: 25px;
-    background: transparent;
+    background: $bg-color;
     border: 2px solid $color-white;
-    color: $color-white;
+    color: $text-color;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     height: 54px;
@@ -38,12 +38,13 @@
         min-height: 67px;
         align-items: center;
 
-            &Button {
-                @include button-styles(13px 29px, transparent, $color-white, 20px 34px, $color-white, $color-black, 67px);
 
-                &Active {
-                    @include button-styles(13px 29px, $color-white, $color-black, 13px 29px, $color-white, $color-white, 54px);
-                }
+            &ButtonActive {
+                @include button-styles(13px 29px, $color-white, $dark-purple, 13px 29px, $color-white, $dark-purple, 54px);
+            }
+
+            &Button {
+                @include button-styles(13px 29px, transparent, $color-white, 20px 34px, $color-white, $dark-purple, 67px);
             }
         }
 
@@ -60,24 +61,86 @@
         }
     }
 
+    &Input {
+        width: 260px;
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: $color-white;
+        margin-top: -5px;
+
+        &::placeholder {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: $color-white;
+        }
+
+        &:active {
+            outline: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
     &Block {
         position: relative;
         height: 420px;
         border: 2px solid $color-white;
         border-radius: 25px;
         margin-top: 25px;
-        overflow-y: scroll;
         z-index: 5;
+    }
+
+    &Scroll {
+        overflow-y: scroll;
+        height: 340px;
+
+        &::-webkit-scrollbar {
+            width: 15px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #D9D9D9;
+            border: 5px solid rgba(#6600CC, 0.88);
+            border-radius: 25px;
+            right: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    }
+
+    &Title {
+        position: sticky;
+        top: 0;
+        color: $color-white;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: transparent;
+        z-index: 10;
     }
 
     &Text {
         padding: 20px 30px;
+        padding-top: 0;
         color: $color-white;
         font-size: 16px;
         font-weight: 500;
         font-style: normal;
         line-height: normal;
         height: 500px;
-        z-index: 5;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 30px calc(100% - 40px));
     }
 }
