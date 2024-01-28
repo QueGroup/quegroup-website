@@ -2,13 +2,33 @@
 
 .footer {
     padding: 82px 228px;
+    margin-top: 50px;
+    position: relative;
     color: $color-white;
     font-size: 16px;
     font-weight: 500;
     word-wrap: break-word;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     gap: 100px;
+
+    &::before {
+        position: absolute;
+        display: block;
+        top: 10%;
+        content: "";
+        width: 100%;
+        max-width: 1000px;
+        height: 1px;
+        background-color: $color-white;
+    }
+}
+
+.footerMainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .footerMainInfo {

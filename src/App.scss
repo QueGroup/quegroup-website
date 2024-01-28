@@ -11,6 +11,10 @@
 body {
   font-family: "Montserrat", serif;
   min-height: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 
 ul {
@@ -19,7 +23,7 @@ ul {
 }
 
 .disabled {
-  display: none;
+  display: none !important; 
 }
 
 a {

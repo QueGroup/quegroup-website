@@ -9,6 +9,26 @@ const MainLayout : React.FC = () => {
 	useNavigate();
 	const location = useLocation();
 
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+
+    useEffect(() => {
+        // if (window.scrollY >= 500) {
+        //     setIsSticky(true)
+        // } else if (window.scrollY < 500) {
+        //   setIsSticky(false)
+        // }
+
+        window.addEventListener('scroll', () => {
+          const current = window.scrollY
+
+          if (current < 700 || current > 5600) {
+              setIsSticky(false)
+          } else if (current >= 500 && isSticky !== true) {
+              setIsSticky(true)
+          }
+      })
+    }, [isSticky])
+
 	const [main, setMain] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -16,8 +36,7 @@ const MainLayout : React.FC = () => {
 		if (location.pathname === "/" || location.pathname === "/politics") {
       setMain(true)
     }
-
-    else if (location.pathname === "/isloading" || location.pathname === "/errorpage") {
+    else if (location.pathname === "/isloading" || location.pathname === "/98") {
       setLoading(true)
     }
 
@@ -45,7 +64,7 @@ const MainLayout : React.FC = () => {
                   <img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz12} alt=""/>
               </div>
         </div>
-        <div className={`${loading ? "disabled" : ""}`}>
+        <div className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : "hi"}`}>
             <Header/>
         </div>
             <Outlet/>

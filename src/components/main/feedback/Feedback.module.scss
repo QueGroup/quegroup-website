@@ -1,0 +1,153 @@
+@import "../../../variables.scss";
+@import "../../../mixins.scss";
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.contactus {
+    width: 500px;
+    min-height: 500px;
+    border-radius: 50px;
+    border: 3px solid #FFF;
+}
+
+
+.title {
+    max-width: 300px;
+    border-bottom: 2px solid $color-white;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    color: $color-white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inputField {
+    height: 60px;
+    border-radius: 25px;
+    border: 3px solid $color-white;
+    background-color: transparent;
+    width: 400px;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    color: $color-white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:focus {
+        text-align: left;
+        transition: 0.3s ease-in-out;
+        outline: none;
+
+        &::placeholder {
+            text-align: left;
+            color: $dark-purple;
+        }
+    }
+
+    &::placeholder {
+        color: $color-white;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: 0.3s ease;
+    }
+
+    &Comment {
+        height: 150px;
+    }
+}
+
+.form {
+    &Buttons {
+        display: flex;
+        justify-content: space-between
+    }
+
+    &Button {
+        @include button-styles;
+        font-family: inherit;
+        font-size: inherit;
+        width: 100%;
+        max-width: 185px;
+    }
+}
+
+.FAQ {
+
+    width: 500px;
+
+    &title {
+        -webkit-text-stroke-width: 2;
+        -webkit-text-stroke-color: #FFF;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $color-white;
+    }
+
+    &list {
+        border-top: 1.5px solid $color-white;
+    }
+
+    &item {
+        width: 100%;
+        max-width: 500px;
+        color: $color-white;
+        border-bottom: 1.5px solid $color-white;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+
+        &Title {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        &Symbol {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &description {
+        display: block;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}

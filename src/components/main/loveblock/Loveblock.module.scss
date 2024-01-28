@@ -3,14 +3,25 @@
 
 $font-weight-bold: 700;
 
-$bg-heart-image: url('../../../../public/img/big-heart.png');
+.block {
+    height: 2000px;
+}
 
 .intro {
+    margin-top: 50px;
     display: flex;
+    flex-direction: row-reverse;
     gap: 100px;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
+    position: sticky;
+    top: 25%;
+    transition: 0.3s ease-in-out;
+
+    &Reverse {
+        flex-direction: row;
+    }
 
     &Block {
         position: relative;
@@ -25,7 +36,6 @@ $bg-heart-image: url('../../../../public/img/big-heart.png');
             content: "";
             width: 175px;
             height: 175px;
-            background-image: $bg-heart-image;
             background-repeat: no-repeat;
             background-size: 100%;
             top: 431px;
@@ -51,53 +61,82 @@ $bg-heart-image: url('../../../../public/img/big-heart.png');
 
 .titleBlock {
     display: flex;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
 }
 
 .title {
-    // font-size: 72px;
-    // line-height: 75px;
-    // font-weight: $font-weight-bold;
-    // word-wrap: break-word;
-    // color: rgba(0, 0, 0, 0);
-    // -webkit-text-stroke: 1px $color-white;
-    // -webkit-text-fill-color: transparent;
-    // margin: 0;
-    // margin-bottom: 10px;
     text-align: right;
-    -webkit-text-stroke-width: 2;
-    -webkit-text-stroke-color: #FFF;
-    font-family: Montserrat;
-    color: $color-white;
+    -webkit-text-stroke: 2px $color-white;
+    color: transparent;
     font-size: 72px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    animation: fadeIn 2s;
 }
 
-.slogan {
-    width: 566px;
+.text {
+    width: 435px;
     color: $color-white;
     font-size: 72px;
     font-weight: $font-weight-bold;
     word-wrap: break-word;
     margin: 0;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    animation: fadeIn 2s;
+
+    &Block {
+        height: 238px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .users {
     color: $color-white;
     font-size: 20px;
+    font-style: normal;
     font-weight: 600;
-    word-wrap: break-word;
-    width: 180px;
+    line-height: normal;
+
+    &Middle {
+        margin-left: 22px;
+    }
 }
 
 .tgButton {
-    padding: 15px 16px 10px 14px;
+    padding: 15px 14.5px 10px 14.5px;
 }
 
 .tg {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
+}
+
+.point {
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    border: 2px solid $color-white;
+    border-radius: 7px;
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &Active {
+        border: 3px solid $color-white;
+    }
 }
