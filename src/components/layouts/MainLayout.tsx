@@ -36,7 +36,6 @@ const MainLayout : React.FC = () => {
 		if (location.pathname === "/" || location.pathname === "/politics") {
       setMain(true)
     }
-
     else if (location.pathname === "/isloading" || location.pathname === "/98") {
       setLoading(true)
     }
