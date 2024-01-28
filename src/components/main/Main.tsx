@@ -1,8 +1,8 @@
-import Dev from "./development/Dev";
+import Dev from "./loveblock/Dev";
 import Feedback from "./feedback/Feedback";
 import Intro from "./intro/Intro";
 import Loveblock from "./loveblock/Loveblock";
-import Product from "./product/Product";
+import Product from "./loveblock/Product";
 
 const Main = () => {
   return (

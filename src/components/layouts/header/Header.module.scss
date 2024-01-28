@@ -42,7 +42,9 @@ $header-item-margin: 50px;
 .signIn {
     border: 2px solid #fff;
     color: $color-white;
-    padding: 15px 29px 13px 66px;
+    font: inherit;
+    font-size: 18px;
+    padding: 14px 29px 13px 66px;
     border-radius: 25px;
     text-align: center;
     background-color: transparent;

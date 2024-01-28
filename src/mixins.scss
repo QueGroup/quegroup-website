@@ -19,6 +19,9 @@
 }
 
 @mixin button-styles {
+  font: inherit;
+  font-size: 20px;
+  font-weight: 500;
   border: 2px solid $color-white;
   color: $color-white;
   padding: 15px 30px;

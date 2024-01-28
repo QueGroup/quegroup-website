@@ -78,7 +78,7 @@ const Politics = () => {
                 <div className={styles.politicsSearch} onClick={() => handleSearch()}>
                     {!isSearch ? 
                         <img src='/img/search.png' className={styles.politicsSearchLogo} alt='поиск'></img> : 
-                        <input type="text" placeholder='поиск' className={styles.politicsInput}></input>
+                        <input type="text" placeholder='Поиск' className={styles.politicsInput}></input>
                     }
                 </div>
             </div>

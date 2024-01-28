@@ -1,4 +1,4 @@
-import styles from './Dev.module.scss';
+import styles from './Loveblock.module.scss';
 import React, { useEffect, useState } from "react";
 
 const Dev : React.FC = () => {
@@ -27,9 +27,15 @@ const Dev : React.FC = () => {
             <div>
                 <div className={styles.titleBlock}>
                     <h2 className={styles.title}>
-                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>BE-Dev</p>
-                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>FE-Dev</p>
-                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>Designer</p>
+                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>
+                            <img src="/img/Dev1.svg" alt="BE-Dev"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>
+                            <img src="/img/Dev2.svg" alt="FE-Dev"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>
+                            <img src="/img/Dev3.svg" alt="Designer"></img>
+                        </p>
                     </h2>
                     <span className={styles.users}>Вакансии</span>
                 </div>
@@ -41,13 +47,10 @@ const Dev : React.FC = () => {
                 <div className={styles.introButtons}>
                     <button className={styles.introButton}>Подробнее</button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/Mail.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
-                    </button>
-                    <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/Link.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                 </div>
             </div>

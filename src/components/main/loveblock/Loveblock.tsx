@@ -26,9 +26,15 @@ const Loveblock : React.FC = () => {
             <div>
                 <div className={styles.titleBlock}>
                     <h2 className={styles.title}>
-                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>История</p>
-                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>Задачи</p>
-                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>Команда</p>
+                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>
+                            <img src="/img/History1.svg" alt="История"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>
+                            <img src="/img/History2.svg" alt="Задачи"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>
+                            <img src="/img/History3.svg" alt="Команда"></img>
+                        </p>
                     </h2>
                     <span className={styles.users}>О компании</span>
                 </div>
@@ -40,13 +46,10 @@ const Loveblock : React.FC = () => {
                 <div className={styles.introButtons}>
                     <button className={styles.introButton}>Подробнее</button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/Notion.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
-                    </button>
-                    <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/License.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import styles from './Product.module.scss';
+import styles from './Loveblock.module.scss';
 import React, { useEffect, useState } from "react";
 
 const Product : React.FC = () => {
@@ -22,16 +22,22 @@ const Product : React.FC = () => {
 
   return (
     <article className={styles.block} id="products">
-        <div className={styles.intro}>
+        <div className={`${styles.intro} ${styles.introReverse}`}>
             <div className={styles.introBlock}></div>
             <div>
                 <div className={styles.titleBlock}>
                     <h2 className={styles.title}>
-                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>Quecount</p>
-                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>Querendo</p>
-                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>Quevent</p>
+                        <p className={`${styles.title} ${isDisabled === 0 ? '' : 'disabled'}`}>
+                            <img src="/img/Products1.svg" alt="Queacc"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 1 ? '' : 'disabled'}`}>
+                            <img src="/img/Products2.svg" alt="Querendo"></img>
+                        </p>
+                        <p className={`${styles.title} ${isDisabled === 2 ? '' : 'disabled'}`}>
+                            <img src="/img/Products3.svg" alt="Quevent"></img>
+                        </p>
                     </h2>
-                    <span className={styles.users}>О продукте</span>
+                    <span className={`${styles.users} ${styles.usersMiddle}`}>О продукте</span>
                 </div>
                 <div className={styles.textBlock}>
                     <p className={`${styles.text} ${isDisabled === 0 ? '' : 'disabled'}`}>Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать.</p>
@@ -41,13 +47,10 @@ const Product : React.FC = () => {
                 <div className={styles.introButtons}>
                     <button className={styles.introButton}>Подробнее</button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/Apple.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                     <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
-                    </button>
-                    <button className={`${styles.introButton} ${styles.tgButton}`}>
-                        <img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+                        <img src='/img/Play_Market.svg' className={styles.tg} alt="логотип тг"></img>
                     </button>
                 </div>
             </div>
