@@ -6,7 +6,7 @@ const ErrorPage: React.FC = () => {
 		<div className={styles.main}>
 			<div className={styles.error}>
 				<h2>Страница</h2>
-				<p className={styles.errorInt}>404</p>
+				<h2 className={styles.errorInt}>404</h2>
 				<h2>Не найдена</h2>
 			</div>
 		</div>
