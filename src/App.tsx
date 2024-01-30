@@ -8,20 +8,20 @@ import IsLoading from "./components/isLoading/IsLoading";
 import ErrorPage from "./components/errorPage/ErrorPage";
 
 function App() : JSX.Element {
-    return (
-      <BrowserRouter>
-            <div className="App">
-                <Routes>
-                    <Route path='/' element={<MainLayout/>}>
-                        <Route index element={<Main/>}></Route>
-                        <Route path='politics' element={<Politics></Politics>}></Route>
-                        <Route path='isloading' element={<IsLoading></IsLoading>}></Route>
-                        <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
-                    </Route>
-                </Routes>
-            </div>
-      </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<Routes>
+					<Route path='/' element={<MainLayout/>}>
+						<Route index element={<Main/>}></Route>
+						<Route path='politics' element={<Politics></Politics>}></Route>
+						<Route path='isloading' element={<IsLoading></IsLoading>}></Route>
+						<Route path='*' element={<ErrorPage></ErrorPage>}></Route>
+					</Route>
+				</Routes>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
