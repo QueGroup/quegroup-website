@@ -1,25 +1,57 @@
-## Dependencies
+## Que website
+Source code for the official Que website
 
-The software requires various dependencies to be installed for proper functionality. These include frameworks, databases, storage mechanisms, build tools, among others. It's essential to install specific, reliable versions of sub-systems and components for seamless operation.
+### Built With
 
-## Installation
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
+### Getting Started
+
+First, you need to clone the repository
+
+```shell
+$ git clone https://github.com/QueGroup/quegroup-website.git
+```
 
 To install all the dependencies enlisted, navigate to the project directory and execute the following commands:
 
-```npm install```
-```npm start```
+```shell
+$ npm install
+```
 
+```shell
+$ npm start
+```
 
-## Configuration
+### Configuration
 
 The project configuration is located in the [package.json](package.json) file.
 
-## How to Test the Software
+### How to Test the Software
 
-To run the application's testing, use the command ```npm run test```.
+To run the application's testing, use the command
 
-## Getting Involved
+```shell
+$ npm run test
+```
 
-We welcome collaborators and contributors to enrich our software with valuable feedback, feature improvements, and essential fixes.
+### Contributing
 
-We believe that this software will mark a pivotal change in the way people approach meetings and connections. Your involvement will be integral to our growth, and we are eager to have you on board. Let's build innovative solutions together!
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
+contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also
+simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
+
+### License
+
+Distributed under the GPL-2.0 license. See [LICENSE](LICENSE) for more information.
