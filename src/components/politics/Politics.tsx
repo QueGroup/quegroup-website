@@ -3,6 +3,7 @@ import Handlebars from "handlebars";
 import {useState} from "react";
 import styles from "./Politics.module.scss";
 import typeTextMap from "./typeTextMap";
+import search from "./search.png";
 
 interface context {
     newText: string;
@@ -77,7 +78,7 @@ const Politics = () => {
 				</div>
 				<div className={styles.politicsSearch} onClick={() => handleSearch()}>
 					{!isSearch ? 
-						<img src='/img/search.png' className={styles.politicsSearchLogo} alt='поиск'></img> : 
+						<img src={search} className={styles.politicsSearchLogo} alt='поиск'></img> :
 						<input type="text" placeholder='Поиск' className={styles.politicsInput}></input>
 					}
 				</div>

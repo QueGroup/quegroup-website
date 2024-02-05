@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import {NavLink} from "react-router-dom";
+import mainLogo from "./main-logo.svg";
 
 const Header : React.FC = () => {
 
@@ -8,7 +9,7 @@ const Header : React.FC = () => {
 		<header>
 			<div className={styles.header}>
 				<NavLink to="/" className={styles.mainLogo}>
-					<img src='/img/main-logo.svg' alt="главный логотип"/>
+					<img src={mainLogo} alt="главный логотип"/>
 				</NavLink>
 				<ul className={styles.headerList}>
 					<li className={styles.headerItem}>

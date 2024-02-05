@@ -4,6 +4,10 @@ import { randomPoz1, randomPoz2, randomPoz3, randomPoz4, randomPoz5, randomPoz6,
 import Header from "./header/Header";
 import styles from "./MainLayout.module.scss";
 import Footer from "./footer/Footer";
+import heartPink from "./little-heart-pink.png";
+import heartPinkRight from "./little-heart-pink-right.png";
+import heartPurple from "./little-heart-purple.png";
+import heartPurpleRight from "./little-heart-purple-right.png";
 
 const MainLayout : React.FC = () => {
 	useNavigate();
@@ -23,7 +27,7 @@ const MainLayout : React.FC = () => {
 
 			if (current < 700 || current > 5600) {
 				setIsSticky(false);
-			} else if (current >= 500 && isSticky !== true) {
+			} else if (current >= 500 && !isSticky) {
 				setIsSticky(true);
 			}
 		});
@@ -50,18 +54,18 @@ const MainLayout : React.FC = () => {
 		<div className={`${main ? styles.mainStyle : ""} ${styles.layout}`}>
 			<div className={`${main ? styles.hearts : "disabled"}`}>
 				<div className={`${styles.heart} ${loading ? "disabled" : ""}`}>
-					<img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz1} alt=""/>
-					<img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz2} alt=""/>
-					<img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz3} alt=""/>
-					<img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz4} alt=""/>
-					<img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz5} alt=""/>
-					<img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz6} alt=""/>
-					<img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz7} alt=""/>
-					<img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz8} alt=""/>
-					<img src="/img/little-heart-pink.png" className={styles.heartLittle} style={randomPoz9} alt=""/>
-					<img src="/img/little-heart-pink-right.png" className={styles.heartLittle} style={randomPoz10} alt=""/>
-					<img src="/img/little-heart-purple.png" className={styles.heartLittle} style={randomPoz11} alt=""/>
-					<img src="/img/little-heart-purple-right.png" className={styles.heartLittle} style={randomPoz12} alt=""/>
+					<img src={heartPink} className={styles.heartLittle} style={randomPoz1} alt=""/>
+					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz2} alt=""/>
+					<img src={heartPurple} className={styles.heartLittle} style={randomPoz3} alt=""/>
+					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz4} alt=""/>
+					<img src={heartPink} className={styles.heartLittle} style={randomPoz5} alt=""/>
+					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz6} alt=""/>
+					<img src={heartPurple} className={styles.heartLittle} style={randomPoz7} alt=""/>
+					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz8} alt=""/>
+					<img src={heartPink} className={styles.heartLittle} style={randomPoz9} alt=""/>
+					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz10} alt=""/>
+					<img src={heartPurple} className={styles.heartLittle} style={randomPoz11} alt=""/>
+					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz12} alt=""/>
 				</div>
 			</div>
 			<div className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : "hi"}`}>

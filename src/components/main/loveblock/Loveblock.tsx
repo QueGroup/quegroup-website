@@ -1,5 +1,10 @@
 import styles from "./Loveblock.module.scss";
 import React, { useEffect, useState } from "react";
+import history1 from "./images/History1.svg";
+import history2 from "./images/History2.svg";
+import history3 from "./images/History3.svg";
+import notion from "./images/Notion.svg";
+import licence from "./images/License.svg";
 
 const Loveblock : React.FC = () => {
 
@@ -27,13 +32,13 @@ const Loveblock : React.FC = () => {
 					<div className={styles.titleBlock}>
 						<h2 className={styles.title}>
 							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}>
-								<img src="/img/History1.svg" alt="История"></img>
+								<img src={history1} alt="История"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 1 ? "" : "disabled"}`}>
-								<img src="/img/History2.svg" alt="Задачи"></img>
+								<img src={history2} alt="Задачи"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 2 ? "" : "disabled"}`}>
-								<img src="/img/History3.svg" alt="Команда"></img>
+								<img src={history3} alt="Команда"></img>
 							</p>
 						</h2>
 						<span className={styles.users}>О компании</span>
@@ -46,10 +51,10 @@ const Loveblock : React.FC = () => {
 					<div className={styles.introButtons}>
 						<button className={styles.introButton}>Подробнее</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/Notion.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={notion} className={styles.tg} alt="логотип тг"></img>
 						</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/License.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={licence} className={styles.tg} alt="логотип тг"></img>
 						</button>
 					</div>
 				</div>
