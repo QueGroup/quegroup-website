@@ -1,6 +1,11 @@
 import styles from "./Footer.module.scss";
 import {NavLink} from "react-router-dom";
 import React from "react";
+import tg from "./tgft.svg";
+import yt from "./ytft.svg";
+import vk from "./vkft.svg";
+import inst from "./instft.svg";
+import mainLogo from "./main-logo.svg";
 
 const Footer : React.FC = () => {
 
@@ -12,7 +17,7 @@ const Footer : React.FC = () => {
 		<footer className={styles.footer}>
 			<div className={styles.footerMainInfo}>
 				<NavLink to="/" className={styles.queInfo} onClick={() => toTop()}>
-					<img src='/img/main-logo.svg' alt="логотип"/>
+					<img src={mainLogo} alt="логотип"/>
 					<p className={styles.Que}>Que</p>
 				</NavLink>
 				<p className={styles.queData}>”Que” • 2022 - 2023</p>
@@ -50,16 +55,16 @@ const Footer : React.FC = () => {
 			</div>
 			<div className={styles.socialMedia}>
 				<div className={styles.socialFooter}>
-					<img src='/img/tgft.svg' alt="tg"></img>
+					<img src={tg} alt="tg"></img>
 				</div>
 				<div className={styles.socialFooter}>
-					<img src='/img/vkft.svg' alt="tg"></img>
+					<img src={vk} alt="vk"></img>
 				</div>
 				<div className={styles.socialFooter}>
-					<img src='/img/ytft.svg' alt="tg"></img>
+					<img src={yt} alt="yt"></img>
 				</div>
 				<div className={styles.socialFooter}>
-					<img src='/img/instft.svg' alt="tg"></img>
+					<img src={inst} alt="inst"></img>
 				</div>
 			</div>
 		</footer>

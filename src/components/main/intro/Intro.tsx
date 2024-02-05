@@ -1,5 +1,6 @@
 import styles from "./Intro.module.scss";
 import React from "react";
+import tg from "./tg.svg";
 
 const Intro : React.FC = () => {
 	return (
@@ -18,7 +19,7 @@ const Intro : React.FC = () => {
 						<button className={styles.introButton}>Подробнее</button>
 						<button className={styles.introButton}>Продукты</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/tg.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={tg} className={styles.tg} alt="логотип тг"></img>
 						</button>
 					</div>
 				</div>

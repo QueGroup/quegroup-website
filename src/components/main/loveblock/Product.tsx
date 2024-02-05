@@ -1,5 +1,10 @@
 import styles from "./Loveblock.module.scss";
 import React, { useEffect, useState } from "react";
+import products1 from "./images/Products1.svg";
+import products2 from "./images/Products2.svg";
+import products3 from "./images/Products3.svg";
+import apple from "./images/Apple.svg";
+import playmarket from "./images/Play_Market.svg";
 
 const Product : React.FC = () => {
 
@@ -28,13 +33,13 @@ const Product : React.FC = () => {
 					<div className={styles.titleBlock}>
 						<h2 className={styles.title}>
 							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}>
-								<img src="/img/Products1.svg" alt="Queacc"></img>
+								<img src={products1} alt="Queacc"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 1 ? "" : "disabled"}`}>
-								<img src="/img/Products2.svg" alt="Querendo"></img>
+								<img src={products2} alt="Querendo"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 2 ? "" : "disabled"}`}>
-								<img src="/img/Products3.svg" alt="Quevent"></img>
+								<img src={products3} alt="Quevent"></img>
 							</p>
 						</h2>
 						<span className={`${styles.users} ${styles.usersMiddle}`}>О продукте</span>
@@ -47,10 +52,10 @@ const Product : React.FC = () => {
 					<div className={styles.introButtons}>
 						<button className={styles.introButton}>Подробнее</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/Apple.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={apple} className={styles.tg} alt="логотип apple"></img>
 						</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/Play_Market.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={playmarket} className={styles.tg} alt="логотип playmarket"></img>
 						</button>
 					</div>
 				</div>

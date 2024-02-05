@@ -1,5 +1,10 @@
 import styles from "./Loveblock.module.scss";
 import React, { useEffect, useState } from "react";
+import dev1 from "./images/Dev1.svg";
+import dev2 from "./images/Dev2.svg";
+import dev3 from "./images/Dev3.svg";
+import mail from "./images/Mail.svg";
+import link from "./images/Link.svg";
 
 const Dev : React.FC = () => {
 
@@ -28,13 +33,13 @@ const Dev : React.FC = () => {
 					<div className={styles.titleBlock}>
 						<h2 className={styles.title}>
 							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}>
-								<img src="/img/Dev1.svg" alt="BE-Dev"></img>
+								<img src={dev1} alt="BE-Dev"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 1 ? "" : "disabled"}`}>
-								<img src="/img/Dev2.svg" alt="FE-Dev"></img>
+								<img src={dev2} alt="FE-Dev"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 2 ? "" : "disabled"}`}>
-								<img src="/img/Dev3.svg" alt="Designer"></img>
+								<img src={dev3} alt="Designer"></img>
 							</p>
 						</h2>
 						<span className={styles.users}>Вакансии</span>
@@ -47,10 +52,10 @@ const Dev : React.FC = () => {
 					<div className={styles.introButtons}>
 						<button className={styles.introButton}>Подробнее</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/Mail.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={mail} className={styles.tg} alt="логотип тг"></img>
 						</button>
 						<button className={`${styles.introButton} ${styles.tgButton}`}>
-							<img src='/img/Link.svg' className={styles.tg} alt="логотип тг"></img>
+							<img src={link} className={styles.tg} alt="логотип тг"></img>
 						</button>
 					</div>
 				</div>
