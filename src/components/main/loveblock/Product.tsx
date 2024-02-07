@@ -5,6 +5,7 @@ import products2 from "./images/Products2.svg";
 import products3 from "./images/Products3.svg";
 import apple from "./images/Apple.svg";
 import playmarket from "./images/Play_Market.svg";
+import Points from "./points/Points.tsx"; /* GAVNO */
 
 const Product : React.FC = () => {
 
@@ -32,7 +33,7 @@ const Product : React.FC = () => {
 				<div>
 					<div className={styles.titleBlock}>
 						<h2 className={styles.title}>
-							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}>
+							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}> {/* isdisabled (boolean значение) не забыть через пропсы передать */}
 								<img src={products1} alt="Queacc"></img>
 							</p>
 							<p className={`${styles.title} ${isDisabled === 1 ? "" : "disabled"}`}>
@@ -59,11 +60,7 @@ const Product : React.FC = () => {
 						</button>
 					</div>
 				</div>
-				<div className={styles.points}>
-					<div className={`${styles.point} ${isDisabled === 0 ? styles.pointActive : ""}`}></div>
-					<div className={`${styles.point} ${isDisabled === 1 ? styles.pointActive : ""}`}></div>
-					<div className={`${styles.point} ${isDisabled === 2 ? styles.pointActive : ""}`}></div>
-				</div>
+				<Points sendMail={sendMail}/> {/* GAVNO */}
 			</div>
 		</article>
 	);
