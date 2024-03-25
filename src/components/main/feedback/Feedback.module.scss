@@ -3,15 +3,19 @@
 
 .feedback {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     gap: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .contactus {
-    width: 500px;
+    min-width: 256px;
     min-height: 500px;
     border-radius: 50px;
     border: 3px solid #FFF;
+    padding-bottom: 15px;
 }
 
 
@@ -28,7 +32,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 260px;
     margin: 0 auto;
     text-align: center;
 }
@@ -38,7 +42,7 @@
     border-radius: 25px;
     border: 3px solid $color-white;
     background-color: transparent;
-    width: 400px;
+    min-width: 220px;
     margin-bottom: 20px;
     padding: 10px;
     transition: 0.3s ease-in-out;
@@ -79,6 +83,8 @@
 .form {
     &Buttons {
         display: flex;
+        flex-direction: column;
+        gap: 20px;
         justify-content: space-between
     }
 
@@ -87,14 +93,13 @@
         font-family: inherit;
         font-size: inherit;
         width: 100%;
-        max-width: 185px;
+        max-width: 250px;
     }
 }
 
 .FAQ {
-
-    width: 500px;
-
+    min-width: 256px;
+    margin: 0 auto;
     &title {
         -webkit-text-stroke-width: 2;
         -webkit-text-stroke-color: #FFF;
@@ -119,7 +124,7 @@
         font-weight: 600;
         line-height: normal;
         transition: opacity 0.3s ease;
-        cursor: pointer;
+        // cursor: pointer;
 
         &Title {
             display: flex;
@@ -149,5 +154,34 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+    }
+}
+
+@include desktop {
+    .feedback {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .FAQ {
+        width: 500px;
+        margin: 0;
+    }
+
+    .contactus {
+        width: 500px;
+    }
+
+    .form {
+        max-width: 400px;
+
+        &Buttons {
+            flex-direction: row;
+            gap: 0;
+        }
+    }
+
+    .inputField {
+        width: 400px;
     }
 }

@@ -10,8 +10,8 @@ $font-weight-bold: 700;
 .intro {
     margin-top: 50px;
     display: flex;
-    flex-direction: row-reverse;
-    gap: 100px;
+    flex-direction: column-reverse;
+    gap: 50px;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
@@ -19,14 +19,11 @@ $font-weight-bold: 700;
     top: 25%;
     transition: 0.3s ease-in-out;
 
-    &Reverse {
-        flex-direction: row;
-    }
-
     &Block {
         position: relative;
-        width: 500px;
-        height: 500px;
+        width: 256px;
+        height: 256px;
+        order: 2;
         border-radius: 50px;
         background-color: $color-white;
 
@@ -46,11 +43,26 @@ $font-weight-bold: 700;
     &Button {
         @include button-styles;
         margin-top: 20px;
+
+        &:first-child {
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            width: 48%;
+        }
+
+        &:nth-child(3) {
+            width: 48%;
+        }
     }
 
     &Buttons {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 15px;
         gap: 10px;
 
         &Button {
@@ -79,11 +91,12 @@ $font-weight-bold: 700;
 .text {
     width: 435px;
     color: $color-white;
-    font-size: 72px;
     font-weight: $font-weight-bold;
     word-wrap: break-word;
     margin: 0;
-    font-size: 28px;
+    font-size: 20px;
+    width: 276px;
+    margin: 0 auto;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -109,10 +122,8 @@ $font-weight-bold: 700;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-
-    &Middle {
-        margin-left: 22px;
-    }
+    display: block;
+    margin: 0 auto;
 }
 
 .tgButton {
@@ -130,7 +141,6 @@ $font-weight-bold: 700;
     background-color: transparent;
     border: 2px solid $color-white;
     border-radius: 7px;
-    margin-bottom: 30px;
 
     &:last-child {
         margin-bottom: 0;
@@ -138,5 +148,97 @@ $font-weight-bold: 700;
 
     &Active {
         border: 3px solid $color-white;
+    }
+}
+
+.points {
+    display: flex;
+    order: 3;
+    gap: 50px;
+}
+
+.description {
+    order: 1;
+    text-align: center;
+}
+
+@include desktop {
+    .intro {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+        position: sticky;
+        top: 25%;
+        transition: 0.3s ease-in-out;
+
+        &Reverse {
+            flex-direction: row;
+        }
+
+        &Block {
+            width: 500px;
+            height: 500px;
+        }
+
+        &Buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: nowrap;
+            padding-left: 0;
+            padding-right: 0;
+            gap: 10px;
+    
+            &Button {
+                @include button-styles;
+            }
+        }
+    
+        &Button {
+            @include button-styles;
+            margin-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            &:first-child {
+                width: 183px !important;
+                height: 61px;
+            }
+    
+            &:nth-child(2) {
+                width: 63px !important;
+                height: 61px;
+            }
+    
+            &:nth-child(3) {
+                width: 63px !important;
+                height: 61px;
+            }
+        }
+    }
+
+    .points {
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 28px;
+        width: 475px;
+        margin: 0;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .users {
+        display: inline;
+        margin: 0;
+
+        &Middle {
+            margin-left: 22px;
+        }
     }
 }

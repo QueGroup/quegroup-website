@@ -30,7 +30,7 @@
   background-color: transparent;
   color: $color-white;
   font-size: 18px;
-  cursor: pointer;
+  cursor: inherit;
   transition: 0.3s ease;
 
   &:hover {

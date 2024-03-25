@@ -8,6 +8,9 @@ import heartPink from "./little-heart-pink.png";
 import heartPinkRight from "./little-heart-pink-right.png";
 import heartPurple from "./little-heart-purple.png";
 import heartPurpleRight from "./little-heart-purple-right.png";
+import Cursor from "../../Cursor";
+import Toggle from "react-toggle";
+import "react-toggle/style.css";
 
 const MainLayout : React.FC = () => {
 	useNavigate();
@@ -15,6 +18,12 @@ const MainLayout : React.FC = () => {
 
 	const [isSticky, setIsSticky] = useState<boolean>(false);
 
+	const [cursor, setCursor] = useState<boolean>(false);
+
+	const handleCursor = () => {
+		setCursor(cursor => !cursor);
+	};
+ 
 	useEffect(() => {
 		// if (window.scrollY >= 500) {
 		//     setIsSticky(true)
@@ -50,32 +59,47 @@ const MainLayout : React.FC = () => {
 	}, [location]);
 
 
+	useEffect(() => {
+		const cursorStyle = !cursor ? "" : "none !important";
+
+		document.documentElement.style.cssText = `cursor: ${cursorStyle}`;
+		document.body.style.cssText = `cursor: ${cursorStyle}`;
+	}, [cursor]);
+	
+
 	return (
-		<div className={`${main ? styles.mainStyle : ""} ${styles.layout}`}>
-			<div className={`${main ? styles.hearts : "disabled"}`}>
-				<div className={`${styles.heart} ${loading ? "disabled" : ""}`}>
-					<img src={heartPink} className={styles.heartLittle} style={randomPoz1} alt=""/>
-					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz2} alt=""/>
-					<img src={heartPurple} className={styles.heartLittle} style={randomPoz3} alt=""/>
-					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz4} alt=""/>
-					<img src={heartPink} className={styles.heartLittle} style={randomPoz5} alt=""/>
-					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz6} alt=""/>
-					<img src={heartPurple} className={styles.heartLittle} style={randomPoz7} alt=""/>
-					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz8} alt=""/>
-					<img src={heartPink} className={styles.heartLittle} style={randomPoz9} alt=""/>
-					<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz10} alt=""/>
-					<img src={heartPurple} className={styles.heartLittle} style={randomPoz11} alt=""/>
-					<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz12} alt=""/>
+		<>
+			{cursor ? <Cursor/> : ""}
+			<div className={styles.toggle}>
+				<h3>Включить пиздатый курсор?</h3>
+				<Toggle defaultChecked={cursor} onChange={handleCursor}/>
+			</div>
+			<div className={`${main ? styles.mainStyle : ""} ${styles.layout}`}>
+				<div className={`${main ? styles.hearts : "disabled"}`}>
+					<div className={`${styles.heart} ${loading ? "disabled" : ""}`}>
+						<img src={heartPink} className={styles.heartLittle} style={randomPoz1} alt=""/>
+						<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz2} alt=""/>
+						<img src={heartPurple} className={styles.heartLittle} style={randomPoz3} alt=""/>
+						<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz4} alt=""/>
+						<img src={heartPink} className={styles.heartLittle} style={randomPoz5} alt=""/>
+						<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz6} alt=""/>
+						<img src={heartPurple} className={styles.heartLittle} style={randomPoz7} alt=""/>
+						<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz8} alt=""/>
+						<img src={heartPink} className={styles.heartLittle} style={randomPoz9} alt=""/>
+						<img src={heartPinkRight} className={styles.heartLittle} style={randomPoz10} alt=""/>
+						<img src={heartPurple} className={styles.heartLittle} style={randomPoz11} alt=""/>
+						<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz12} alt=""/>
+					</div>
+				</div>
+				<div className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : "hi"}`}>
+					<Header/>
+				</div>
+				<Outlet/>
+				<div className={`${loading ? "disabled" : ""}`}>
+					<Footer/>
 				</div>
 			</div>
-			<div className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : "hi"}`}>
-				<Header/>
-			</div>
-			<Outlet/>
-			<div className={`${loading ? "disabled" : ""}`}>
-				<Footer/>
-			</div>
-		</div>
+		</>
 	);
 };
 

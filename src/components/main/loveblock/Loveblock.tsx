@@ -28,7 +28,7 @@ const Loveblock : React.FC = () => {
 		<article className={styles.block} id="project">
 			<div className={styles.intro}>
 				<div className={styles.introBlock}></div>
-				<div>
+				<div className={styles.description}>
 					<div className={styles.titleBlock}>
 						<h2 className={styles.title}>
 							<p className={`${styles.title} ${isDisabled === 0 ? "" : "disabled"}`}>
