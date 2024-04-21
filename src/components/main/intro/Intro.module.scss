@@ -34,7 +34,7 @@ $bg-heart-image: url('./big-heart.png');
         }
     }
 
-    &Button {
+    &ButtonProd {
         @include button-styles;
         margin-top: 20px;
 
@@ -160,7 +160,7 @@ $bg-heart-image: url('./big-heart.png');
         }
     }
 
-    &Button {
+    &ButtonProd {
         @include button-styles;
         margin-top: 20px;
 
