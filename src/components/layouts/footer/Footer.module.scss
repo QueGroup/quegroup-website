@@ -1,7 +1,6 @@
 @import "../../../mixins.scss";
 
 .footer {
-    padding: 82px 228px;
     margin-top: 50px;
     position: relative;
     color: $color-white;
@@ -9,6 +8,8 @@
     font-weight: 500;
     word-wrap: break-word;
     display: flex;
+    flex-direction: column;
+    padding-left: 30px;
     align-items: flex-start;
     justify-content: center;
     gap: 100px;
@@ -16,7 +17,7 @@
     &::before {
         position: absolute;
         display: block;
-        top: 10%;
+        top: -1%;
         content: "";
         width: 100%;
         max-width: 1000px;
@@ -89,4 +90,21 @@
 .socialFooter {
     width: 40px;
     height: 40px;
+}
+
+@include desktop {
+    .footer {
+        padding: 82px 228px;
+        margin-top: 50px;
+        position: relative;
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 100px;
+    }
 }

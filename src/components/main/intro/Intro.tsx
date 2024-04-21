@@ -16,9 +16,9 @@ const Intro : React.FC = () => {
 					</div>
 					<p className={styles.slogan}>Обьединяем людей одним действием.</p>
 					<div className={styles.introButtons}>
-						<button className={styles.introButton}>Подробнее</button>
-						<button className={styles.introButton}>Продукты</button>
-						<button className={`${styles.introButton} ${styles.tgButton}`}>
+						<button className={styles.introButtonProd}>Подробнее</button>
+						<button className={styles.introButtonProd}>Продукты</button>
+						<button className={`${styles.introButtonProd} ${styles.tgButton}`}>
 							<img src={tg} className={styles.tg} alt="логотип тг"></img>
 						</button>
 					</div>

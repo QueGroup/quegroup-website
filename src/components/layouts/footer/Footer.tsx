@@ -34,7 +34,7 @@ const Footer : React.FC = () => {
 					<li className={styles.navigationItem}>Контакты</li>
 				</ul>
 			</div>
-			<div className={styles.navigation}>
+			{/* <div className={styles.navigation}>
 				<h3 className={styles.navigationTitle}>О Компании</h3>
 				<p className={styles.navigationItem}>Россия, Санкт-Петербург</p>
 				<p className={styles.navigationItem}>Ул. Юнкеров 131, лит. А</p>
@@ -43,7 +43,7 @@ const Footer : React.FC = () => {
 				<p className={styles.navigationItem}>Документы и справки</p>
 				<NavLink to="politics" className={styles.navigationItem}>Политика компании</NavLink>
 				<p className={styles.navigationItem}>Нац. проекты России</p>
-			</div>
+			</div> */}
 			<div className={styles.navigation}>
 				<h3 className={styles.navigationTitle}>Социальные сети</h3>
 				<p className={styles.navigationItem}>Наш блог ВКонтакте</p>

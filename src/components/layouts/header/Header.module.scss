@@ -6,19 +6,32 @@ $header-item-margin: 50px;
 
 .header {
     display: flex;
-    padding: $header-padding;
+    padding: 30px 10px;
+    padding-right: 120px;
     justify-content: space-between;
     font-weight: $header-font-weight;
 
     &List {
         list-style-type: none;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        top: -20px;
+        margin-left: -10px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+        align-items: left;
+        background-color: $dark-purple;
+        z-index: 5;
         /* gap: 50px; */
     }
 
     &Item {
         font-size: 18px;
+        margin-top: 20px;
         color: $color-white;
         cursor: pointer;
         transition: 0.3s ease-in-out;
@@ -59,4 +72,44 @@ $header-item-margin: 50px;
 .mainLogo {
     width: 50px;
     height: 50px;
+}
+
+
+.burgerButton {
+    background-color: transparent;
+    z-index: 6;
+    position: fixed;
+    left: 80%;
+    top: 35px;
+    border: none;
+    color: white;
+}
+
+@include desktop {
+    .header {
+
+        padding: $header-padding;
+
+        &List {
+            flex-direction: row;
+            position: relative;
+            width: inherit;
+            margin-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: transparent;
+            box-shadow: none;
+            top: 0;
+            align-items: center;
+            transform: translateY(0) !important;
+        }
+
+        &Item {
+            margin-top: 0;
+        }
+    }
+
+    .burgerButton {
+        display: none;
+    }
 }

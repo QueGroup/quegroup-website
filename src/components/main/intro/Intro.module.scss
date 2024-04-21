@@ -7,15 +7,16 @@ $bg-heart-image: url('./big-heart.png');
 
 .intro {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: 30px;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
 
     &Block {
         position: relative;
-        width: 500px;
-        height: 500px;
+        width: 256px;
+        height: 256px;
         border-radius: 50px;
         background-color: $color-white;
 
@@ -33,14 +34,29 @@ $bg-heart-image: url('./big-heart.png');
         }
     }
 
-    &Button {
+    &ButtonProd {
         @include button-styles;
         margin-top: 20px;
+
+        &:first-child {
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            width: 49%;
+        }
+
+        &:nth-child(3) {
+            width: 48%;
+        }
     }
 
     &Buttons {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
+        padding-left: 15px;
+        padding-right: 15px;
         gap: 10px;
 
         &Button {
@@ -51,20 +67,13 @@ $bg-heart-image: url('./big-heart.png');
 
 .titleBlock {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
+    text-align: center;
+    gap: 20px;
 }
 
 .title {
-    // font-size: 72px;
-    // line-height: 75px;
-    // font-weight: $font-weight-bold;
-    // word-wrap: break-word;
-    // color: rgba(0, 0, 0, 0);
-    // -webkit-text-stroke: 1px $color-white;
-    // -webkit-text-fill-color: transparent;
-    // margin: 0;
-    // margin-bottom: 10px;
     text-align: right;
     -webkit-text-stroke-width: 2;
     -webkit-text-stroke-color: #FFF;
@@ -77,12 +86,14 @@ $bg-heart-image: url('./big-heart.png');
 }
 
 .slogan {
-    width: 566px;
+    width: 276px;
     color: $color-white;
-    font-size: 72px;
+    font-size: 30px;
+    text-align: center;
     font-weight: $font-weight-bold;
     word-wrap: break-word;
-    margin: 0;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
 .users {
@@ -100,4 +111,69 @@ $bg-heart-image: url('./big-heart.png');
 .tg {
     width: 24px;
     height: 24px;
+}
+
+
+@include desktop {
+    .intro {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        &Block {
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    .titleBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        text-align: left;
+    }
+
+    .slogan {
+        width: 566px;
+        color: $color-white;
+        font-size: 72px;
+        text-align: left;
+        font-weight: $font-weight-bold;
+        word-wrap: break-word;
+        margin: 0;
+    }
+
+    &Buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 10px;
+
+        &Button {
+            @include button-styles;
+        }
+    }
+
+    &ButtonProd {
+        @include button-styles;
+        margin-top: 20px;
+
+        &:first-child {
+            width: 183px !important;
+        }
+
+        &:nth-child(2) {
+            width: 168px !important;
+        }
+
+        &:nth-child(3) {
+            width: 60px !important;
+        }
+    }
 }
