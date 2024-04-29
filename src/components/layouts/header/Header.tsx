@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 import {NavLink} from "react-router-dom";
 import mainLogo from "./main-logo.svg";
-import { IoMdClose, IoMdOpen } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header : React.FC = () => {
@@ -14,13 +14,13 @@ const Header : React.FC = () => {
 	};
 
 	return (
-		<header>
+		<div>
 			<div className={styles.header}>
 				<NavLink to="/" className={styles.mainLogo}>
 					<img src={mainLogo} alt="главный логотип"/>
 				</NavLink>
 				<button type="button" className={styles.burgerButton} onClick={() => handleOpen()}>{!open ? <RxHamburgerMenu style={{width: "40px", height: "40px"}}/> : <IoMdClose style={{width: "40px", height: "40px"}}/>}</button>
-				<ul className={styles.headerList} style={{ transform: `${open ? "translateY(0)" : "translateY(-100%)"}` }}>
+				<ul className={styles.headerList} style={{ transform: `${open ? "translateY(0)" : "translateY(-105%)"}`, transition: "0.3s ease-in-out" }}>
 					<li className={styles.headerItem}>
 						<a href="#main">Главная</a>
 					</li>
@@ -36,12 +36,14 @@ const Header : React.FC = () => {
 					<li className={styles.headerItem}>
 						<a href="#feedback">Контакты</a>
 					</li>
+					<li>
+						<button className={styles.signIn}>
+							Войти
+						</button>
+					</li>
 				</ul>
-				<button className={styles.signIn}>
-                Войти
-				</button>
 			</div>
-		</header>
+		</div>
 	);
 };
 

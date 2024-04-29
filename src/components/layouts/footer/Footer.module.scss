@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     align-items: flex-start;
     justify-content: center;
     gap: 100px;
@@ -19,10 +21,12 @@
         display: block;
         top: -1%;
         content: "";
-        width: 100%;
+        width: 85%;
         max-width: 1000px;
         height: 1px;
         background-color: $color-white;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 

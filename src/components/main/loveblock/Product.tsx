@@ -13,7 +13,6 @@ const Product : React.FC = () => {
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
 			const current = window.scrollY;
-			console.log(current);
 
 			if (current < 3200) {
 				setIsDisabled(0);

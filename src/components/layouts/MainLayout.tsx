@@ -91,9 +91,9 @@ const MainLayout : React.FC = () => {
 						<img src={heartPurpleRight} className={styles.heartLittle} style={randomPoz12} alt=""/>
 					</div>
 				</div>
-				<div className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : "hi"}`}>
+				<header className={`${loading ? "disabled" : ""} ${isSticky ? styles.sticky : ""}`}>
 					<Header/>
-				</div>
+				</header>
 				<Outlet/>
 				<div className={`${loading ? "disabled" : ""}`}>
 					<Footer/>
