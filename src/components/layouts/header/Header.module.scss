@@ -6,8 +6,7 @@ $header-item-margin: 50px;
 
 .header {
     display: flex;
-    padding: 30px 10px;
-    padding-right: 120px;
+    padding: 30px 120px 30px 25px;
     justify-content: space-between;
     font-weight: $header-font-weight;
 
@@ -18,13 +17,14 @@ $header-item-margin: 50px;
         position: fixed;
         width: 100%;
         top: -20px;
-        margin-left: -10px;
+        margin-left: -25px;
         padding-top: 40px;
         padding-bottom: 50px;
         padding-left: 20px;
         box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
         align-items: left;
         background-color: $dark-purple;
+        border-radius: 0px 0px 15px 15px;
         z-index: 5;
         /* gap: 50px; */
     }
@@ -65,8 +65,9 @@ $header-item-margin: 50px;
     background-image: url('./tg.svg');
     background-repeat: no-repeat;
     background-size: 24px 24px;
-    background-position: 25px 18px;
+    background-position: 25px 50%;
     cursor: pointer;
+    margin-top: 40px;
 }
 
 .mainLogo {
@@ -79,7 +80,8 @@ $header-item-margin: 50px;
     background-color: transparent;
     z-index: 6;
     position: fixed;
-    left: 80%;
+    left: 100%;
+    transform: translateX(-150%);
     top: 35px;
     border: none;
     color: white;
@@ -102,6 +104,7 @@ $header-item-margin: 50px;
             top: 0;
             align-items: center;
             transform: translateY(0) !important;
+            margin: 0;
         }
 
         &Item {
@@ -111,5 +114,8 @@ $header-item-margin: 50px;
 
     .burgerButton {
         display: none;
+    }
+    .signIn {
+        margin-top: 0;
     }
 }
